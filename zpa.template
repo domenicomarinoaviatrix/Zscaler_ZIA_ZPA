@@ -1,0 +1,50 @@
+####################################
+### AZR ZPA ZSCALER INTEGRATION TEMPLATE ## 
+##################################
+## Replace xyz with the region code
+##
+##
+# ### xyz ###
+# module "zscaler_zpa_integration_xyz_01" {
+#   source = "git::ssh://git@ssh.dev.azure.com/v3/novonordiskit/Global Network - Aviatrix/module-zpa-integration-azr?ref=main"
+#   providers = {
+#     azurerm.zpa = azurerm.zpa
+#   }
+#   environment = local.environment
+
+#   controller_public_ip = data.terraform_remote_state.control-plane.outputs.controller_public_ip
+#   copilot_public_ip    = data.terraform_remote_state.control-plane.outputs.copilot_public_ip
+# 
+#   zpa_cidr = local.regions["xyz"].zpa_cidr_map
+#   # az_support              = false (in the Azure India Region only)
+#   region_code          = data.terraform_remote_state.infra-one.outputs.xyz_region_code
+#   location             = data.terraform_remote_state.infra-one.outputs.xyz_location
+#   transit_gateway_name = data.terraform_remote_state.infra-one.outputs.xyz_01_gateway_name
+# }
+
+
+####################################
+### AWS ZPA ZSCALER INTEGRATION TEMPLATE ## 
+##################################
+## Replace xyz with the region code
+##
+##
+# ### xyz ###
+# module "zscaler_zpa_integration_xyz_01" {
+#   source               = "git::ssh://git@ssh.dev.azure.com/v3/novonordiskit/Global Network - Aviatrix/module-zpa-integration-aws"
+#   providers = {
+#     aws = aws.zpa_xyz
+#   }
+#   environment = local.environment
+  
+#   controller_public_ip = data.terraform_remote_state.control-plane.outputs.controller_public_ip
+#   copilot_public_ip    = data.terraform_remote_state.control-plane.outputs.copilot_public_ip
+
+#   zpa_cidr                = local.regions["xyz"].zpa_cidr_map
+#   # az_support              = false (in the Azure India Region only)
+
+#   region_code            = "xyz"
+#   location               = local.regions["xyz"].location
+#   transit_gateway_name = data.terraform_remote_state.infra-one.outputs.xyz_01_gateway_name
+
+#   }

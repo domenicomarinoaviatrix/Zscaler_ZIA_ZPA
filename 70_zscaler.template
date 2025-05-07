@@ -1,0 +1,28 @@
+####################################
+### ZIA ZSCALER INTEGRATION TEMPLATE ## 
+##################################
+## Replace xyz with the region code
+##
+##
+
+### xyz ##
+# module "zscaler_integration_xyz_01" {
+#   source               = "git::ssh://git@ssh.dev.azure.com/v3/novonordiskit/Global Network - Aviatrix/module-zia-integration-azr?ref=main"
+#   providers = {
+#     azurerm.zia = azurerm.zia
+#   }
+
+#  controller_public_ip = data.terraform_remote_state.control-plane.outputs.controller_public_ip
+#  copilot_public_ip    = data.terraform_remote_state.control-plane.outputs.copilot_public_ip
+
+#  az_support           = false (in the Azure India Region only)
+#  region_code          = local.regions["xyz"].region_code
+#  location             = local.regions["xyz"].location
+#  prgw_public_ip       = module.azure_public_ip_xyz.prgw_public_ip
+#  hagw_public_ip       = module.azure_public_ip_xyz.hagw_public_ip
+#  transit_gateway_name = module.azure_transit_gateway_xyz_01.transit_gateway_name
+# }
+##########
+
+
+
